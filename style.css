@@ -17,7 +17,6 @@ p {
 /* Set font details for links */
 a {
     letter-spacing: 0.075rem;
-    text-decoration: underline;
     text-decoration-color: #ffffff;
     text-align: center;
     color: #ffffff;
@@ -36,11 +35,9 @@ h1 {
     font-size: 3rem;
     letter-spacing: 0.33rem;
     text-align: center;
-    text-decoration: underline;
     text-transform: uppercase;
     /* Set spacing and background details */
     padding: 1rem;
-    padding-bottom: 1.5rem;
     background-color: #80FFFF;
     border-radius: 1rem;
     margin: 0;
