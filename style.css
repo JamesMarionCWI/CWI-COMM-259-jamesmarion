@@ -7,16 +7,41 @@ body {
     margin-bottom: 5rem;
 }
 
+/* Make header fancy */
+/* Set spacing and background details */
+header {
+    padding: 1.25rem;
+    background-color: #80FFFF;
+    border-radius: 1rem;
+    margin: 0;
+    margin-top: 1rem;
+}
+/* Set font details */
+h1 {
+    margin: 0;
+    font-family: Consolas, 'Courier New', Courier, monospace;
+    font-size: 3rem;
+    letter-spacing: 0.33rem;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+
 /* Improve readability for blobs of text */
 p {
-    letter-spacing: 0.075rem;
-    line-height: 1.5rem;
-    text-indent: 2rem;
+    letter-spacing: 0.075em;
+    line-height: 1.5;
+    text-indent: 2em;
+}
+
+/* Round the image */
+img {
+    border-radius: 1rem;
 }
 
 /* Set font details for links */
 a {
-    letter-spacing: 0.075rem;
+    letter-spacing: 0.075em;
     text-decoration-color: #ffffff;
     text-align: center;
     color: #ffffff;
@@ -25,26 +50,5 @@ a {
 footer a > div {
     background-color: #3080C0;
     border-radius: 1rem;
-    padding: 2rem 1rem;
-}
-
-/* Make header fancy */
-h1 {
-    /* Set font details */
-    font-family: Consolas, 'Courier New', Courier, monospace;
-    font-size: 3rem;
-    letter-spacing: 0.33rem;
-    text-align: center;
-    text-transform: uppercase;
-    /* Set spacing and background details */
-    padding: 1rem;
-    background-color: #80FFFF;
-    border-radius: 1rem;
-    margin: 0;
-    margin-top: 1rem;
-}
-
-/* Round the image */
-img {
-    border-radius: 1rem;
+    padding: 2em 1em;
 }
