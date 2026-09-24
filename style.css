@@ -1,0 +1,53 @@
+/* Set the font and center the page */
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    max-width: 450px;
+    margin: auto;
+    /* Push the bottom of the page slightly farther away to allow scrolling down */
+    margin-bottom: 5rem;
+}
+
+/* Improve readability for blobs of text */
+p {
+    letter-spacing: 0.075rem;
+    line-height: 1.5rem;
+    text-indent: 2rem;
+}
+
+/* Set font details for links */
+a {
+    letter-spacing: 0.075rem;
+    text-decoration: underline;
+    text-decoration-color: #ffffff;
+    text-align: center;
+    color: #ffffff;
+}
+/* anchor surrounds a block element to give a background color */
+footer a > div {
+    background-color: #3080C0;
+    border-radius: 1rem;
+    padding: 2rem 1rem;
+}
+
+/* Make header fancy */
+h1 {
+    /* Set font details */
+    font-family: Consolas, 'Courier New', Courier, monospace;
+    font-size: 3rem;
+    letter-spacing: 0.33rem;
+    text-align: center;
+    text-decoration: underline;
+    text-transform: uppercase;
+    /* Set spacing and background details */
+    padding: 1rem;
+    padding-bottom: 1.5rem;
+    background-color: #80FFFF;
+    border-radius: 1rem;
+    margin: 0;
+    margin-top: 1rem;
+}
+
+/* Round the image */
+img {
+    border-radius: 1rem;
+}
