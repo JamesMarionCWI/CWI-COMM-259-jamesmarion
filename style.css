@@ -13,8 +13,7 @@ header {
     padding: 1.25rem;
     background-color: #80FFFF;
     border-radius: 1rem;
-    margin: 0;
-    margin-top: 1rem;
+    margin: 1rem 0;
 }
 /* Set font details */
 h1 {
@@ -31,6 +30,10 @@ h1 {
 p {
     letter-spacing: 0.075em;
     line-height: 1.5;
+}
+
+/* Indent main paragraphs */
+main p {
     text-indent: 2em;
 }
 
@@ -39,16 +42,44 @@ img {
     border-radius: 1rem;
 }
 
-/* Set font details for links */
-a {
+/* Nav should be horizontal */
+nav {
+    display: flex;
+    justify-content: space-between;
+}
+/* Set font details for nav links */
+nav a {
     letter-spacing: 0.075em;
-    text-decoration-color: #ffffff;
     text-align: center;
+    text-decoration-color: #ffffff;
     color: #ffffff;
 }
-/* anchor surrounds a block element to give a background color */
-footer a > div {
+/* Anchor surrounds a block element to give a background color */
+nav a > div {
     background-color: #3080C0;
     border-radius: 1rem;
     padding: 2em 1em;
+}
+nav a[target="_blank"] > div {
+    background-color: #004080;
+}
+/* Hover details */
+nav a:hover {
+    text-decoration-color: #000000;
+    color: #000000;
+}
+nav a[target="_blank"]:hover {
+    text-decoration-color: #ffffff;
+    color: #ffffff;
+}
+nav a > div:hover {
+    background-color: #00C040;
+}
+nav a[target="_blank"] > div:hover {
+    background-color: #008040;
+}
+
+/* Smaller footer text */
+footer {
+    font-size: 0.9em;
 }
