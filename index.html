@@ -4,22 +4,166 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="A simple site showcasing my love for programming.">
-    <title>Programming Fan Site - By James Marion</title>
+    <title>Programming For Asks</title>
 
     <link rel="stylesheet" href="style.css">
+    <style>
+        #coreidea {
+            background-color: #008040;
+        }
+        #lessons {
+            background-color: #004080;
+        }
+
+        #lessons .cards {
+            display: flex;
+            justify-content: center;
+        }
+
+        /* Ensure each card has a standardized sizing and style */
+        #lessons .card {
+            padding: 1em;
+            padding-top: 1rem;
+            margin: 0.5em;
+            margin-bottom: 2em;
+            width: 15em;
+            height: 100%;
+            border-radius: 1rem;
+            border: 1px solid black;
+            color: #000000;
+        }
+
+        #lessons .card:hover {
+            border: 1px solid white;
+        }
+
+        #lessons .card .card-tag {
+            text-align: right;
+            font-size: 0.75em;
+            margin: 0;
+        }
+        #lessons .card .card-tag{
+            color: #404040;
+        }
+
+        #lessons .card p, #lessons .card h3 {
+            margin: 0;
+            text-indent: 0;
+        }
+        #lessons .card h3 {
+            margin-bottom: 1rem;
+        }
+        #lessons .card.foundational {
+            order: 0;
+            background-color: #80FFFF;
+        }
+        #lessons .card.practical {
+            order: -1;
+            background-color: #FF80FF;
+            margin-top: 2em;
+        }
+        #lessons .card.bigpicture {
+            order: 1;
+            background-color: #00FF80;
+            margin-top: 2em;
+        }
+
+        @media screen and (max-width: 975px) {
+
+        }
+        @media screen and (max-width: 700px) {
+            #lessons h2 {
+                margin-bottom: 0;
+            }
+            #lessons .cards {
+                flex-direction: column;
+                justify-content: space-around;
+                align-items: center;
+            }
+            #lessons .card {
+                margin: 0.5em 0;
+            }
+            #lessons .card:last-of-type {
+                margin-bottom: 0;
+            }
+            #lessons .card.foundational {
+                order: -1;
+            }
+            #lessons .card.practical {
+                order: 0;
+                margin-top: 0;
+            }
+            #lessons .card.bigpicture {
+                order: 1;
+                margin-top: 0;
+            }
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <h1>Programming Fan Site</h1>
-    </header>
-    <nav>
-        <a href="index.html"><div>Home</div></a>
-        <a href="https://www.w3schools.com/" target="_blank"><div>W3Schools</div></a>
-        <a href="about.html"><div>About</div></a>
-    </nav>
+    <div class="header">
+        <header>
+            <h1>Programming For Asks</h1>
+        </header>
+        <nav>
+            <input type="checkbox" name="nav-toggle" id="nav-toggle" aria-hidden="true" />
+            <label for="nav-toggle" class="nav-toggle" aria-hidden="true"></label>
+            <ul>
+                <li><a href="index.html"><div>Home</div></a></li>
+                <li><a href="foundational.html"><div>The Foundations</div></a></li>
+                <li><a href="practical.html"><div>In Practice</div></a></li>
+                <li><a href="bigpicture.html"><div>The Big Picture</div></a></li>
+                <li><a href="about.html"><div>About Me</div></a></li>
+            </ul>
+        </nav>
+    </div>
     <main>
-        <p>Programming is fun. I can make all kinds of small tools and utilities for my own personal use. Sure, some "programs" are these giant millions of lines of code projects (such as the entirety of the Windows operating system), but the vast majority of them are just going to be these simple utility scripts automating things in ways that make life simply 200x easier. It's all valid code either way.</p>
-        <img src="https://placecats.com/neo/450/450" alt="Just a cute cat pic because this is the Internet" />
+        <section id="landing">
+            <h2>Programming For Asks</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.</p>
+            <a href="foundational.html">Start Learning Today</a>
+        </section>
+        <section id="coreidea">
+            <h2>The Core Idea</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.</p>
+        </section>
+        <section id="lessons">
+            <h2>Lessons</h2>
+            <div class="cards">
+                <div class="card practical">
+                    <p class="card-tag">Practical</p>
+                    <h3>Lesson Title</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat.</p>
+                </div>
+                <div class="card foundational">
+                    <p class="card-tag">Foundational</p>
+                    <h3>Lesson Title</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat.</p>
+                </div>
+                <div class="card bigpicture">
+                    <p class="card-tag">Big Picture</p>
+                    <h3>Lesson Title</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat.</p>
+                </div>
+            </div>
+            <div class="cards">
+                <div class="card practical">
+                    <p class="card-tag">Practical</p>
+                    <h3>Lesson Title</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat.</p>
+                </div>
+                <div class="card foundational">
+                    <p class="card-tag">Foundational</p>
+                    <h3>Lesson Title</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat.</p>
+                </div>
+                <div class="card bigpicture">
+                    <p class="card-tag">Big Picture</p>
+                    <h3>Lesson Title</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat.</p>
+                </div>
+            </div>
+        </section>
     </main>
     <footer>
         <p>&copy;2026 - James Marion</p>

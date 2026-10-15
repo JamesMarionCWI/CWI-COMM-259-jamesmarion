@@ -1,28 +1,40 @@
-/* Set the font and center the page */
+/* Set the font and ensure defaults */
 body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    max-width: 450px;
-    margin: auto;
-    /* Push the bottom of the page slightly farther away to allow scrolling down */
-    margin-bottom: 5rem;
+    margin: 0;
+    /* Push the bottom of the page slightly farther away to allow scrolling down beyond the bottom of the page a little */
+    margin-bottom: 2.5rem;
+}
+
+/* Standardize some settings across browsers in case some have weird defaults */
+html, body, header, nav, section, main, footer {
+    margin: 0;
+    padding: 0;
+}
+
+/* Ensure the main content of the page is slightly away from the edge of the browser window */
+header, main, footer {
+    padding: 1.25rem;
 }
 
 /* Make header fancy */
 /* Set spacing and background details */
 header {
-    padding: 1.25rem;
     background-color: #80FFFF;
-    border-radius: 1rem;
-    margin: 1rem 0;
+    margin: 0;
+    width: 100%;
 }
 /* Set font details */
 h1 {
     margin: 0;
-    font-family: Consolas, 'Courier New', Courier, monospace;
-    font-size: 3rem;
     letter-spacing: 0.33rem;
-    text-align: center;
-    text-transform: uppercase;
+    color: white;
+    text-shadow: 1px 1px #000000, -1px 1px #000000, 1px -1px #000000, -1px -1px #000000;
+    background-color: #004080;
+    border: 1px solid black;
+    border-radius: 1rem;
+    padding: 0.5rem;
+    width: fit-content;
 }
 
 
@@ -42,44 +54,226 @@ img {
     border-radius: 1rem;
 }
 
-/* Nav should be horizontal */
-nav {
-    display: flex;
-    justify-content: space-between;
-}
 /* Set font details for nav links */
 nav a {
     letter-spacing: 0.075em;
+    font-size: 1.75rem;
+    font-weight: bold;
     text-align: center;
-    text-decoration-color: #ffffff;
-    color: #ffffff;
+    text-decoration: none;
 }
-/* Anchor surrounds a block element to give a background color */
+/* Anchor surrounds a block element to give a lot of clickable space */
 nav a > div {
-    background-color: #3080C0;
-    border-radius: 1rem;
-    padding: 2em 1em;
-}
-nav a[target="_blank"] > div {
-    background-color: #004080;
-}
-/* Hover details */
-nav a:hover {
-    text-decoration-color: #000000;
-    color: #000000;
-}
-nav a[target="_blank"]:hover {
-    text-decoration-color: #ffffff;
-    color: #ffffff;
-}
-nav a > div:hover {
-    background-color: #00C040;
-}
-nav a[target="_blank"] > div:hover {
-    background-color: #008040;
+    padding: 1em;
 }
 
 /* Smaller footer text */
 footer {
-    font-size: 0.9em;
+    background-color: #444444;
+    color: #FFFFFF;
+    text-align: right;
+}
+
+/* Center both the header and the nav */
+.header {
+    display: table;
+    font-family: Consolas, 'Courier New', Courier, monospace;
+    line-height: 1;
+    width: 100%;
+    border-bottom: 2px solid black;
+}
+
+.header > * {
+    display: table-cell;
+}
+
+
+/* Ensure the nav has decent spacing */
+nav {
+    padding: 0;
+    margin: 0;
+}
+
+/* Hides nav while it isn't checked */
+nav ul {
+    display: none;
+}
+
+/* Hides the checkbox so that the hamburger label is the only way to toggle it */
+nav #nav-toggle {
+    display: none;
+}
+
+/* Styles the hamburger label with enough clickable space for mobile devices too */
+nav .nav-toggle {
+    display: block;
+    padding: 2.25rem;
+    padding-right: 2.25rem;
+    color: black;
+    background-color: #80FFFF;
+}
+nav .nav-toggle::after {
+    content: "\2630"; /* hamburger symbol */
+    color: #FFFFFF;
+    text-shadow: 1px 1px #000000, -1px 1px #000000, 1px -1px #000000, -1px -1px #000000;
+    background-color: #004080;
+    border: 1px solid black;
+    border-radius: 1rem;
+    padding: 0.5rem;
+    display: block;
+    min-width: 44px;
+    text-align: center;
+}
+/* There should be a toggle button that toggles the menu visibility when clicked. */
+/* When checked, display the menu */
+/* Vertical nav when displayed */
+nav #nav-toggle:checked~ul {
+    list-style-type: none;
+    margin: 0;
+    margin-top: 1px; /* Include the header border as the top border */
+    padding: 0;
+    display: flex;
+    position: absolute;
+    right: 0rem;
+    width: 30rem;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+nav #nav-toggle:checked~ul li {
+    border: 1px solid black;
+    border-right: 0;
+    border-left-width: 2px;
+    border-top: 0;
+    background-color: #808080;
+}
+nav #nav-toggle:checked~ul li:hover > a div {
+    /* 50% opacity hover */
+    background-color: #00804080;
+}
+nav #nav-toggle:checked~ul li:last-of-type {
+    border-bottom-left-radius: 1rem;
+    border-bottom-width: 2px;
+}
+nav #nav-toggle:checked~ul li:not(:last-of-type):not(:first-of-type) > a {
+    color: #80FFFF;
+    text-shadow: 1px 1px #000000, -1px 1px #000000, 1px -1px #000000, -1px -1px #000000;
+}
+nav #nav-toggle:checked~ul li > a {
+    color: #000000;
+    text-shadow: none;
+}
+/* Mobile nav toggle button styling */
+nav #nav-toggle:checked~.nav-toggle::after {
+    content: "\2716"; /* close (x) symbol */
+}
+
+
+h1, nav .nav-toggle {
+    font-size: 3rem;
+}
+
+main, footer {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: auto;
+}
+
+main {
+    padding: 0;
+}
+
+main > section {
+    margin: 0;
+    width: 100%;
+    padding: 1.5em;
+    box-sizing: border-box;
+    border-bottom: solid 1px black;
+    background-color: #444444;
+    color: white;
+}
+
+h2 {
+    margin: 0;
+    margin-bottom: 1em;
+    text-decoration: underline;
+    text-align: center;
+}
+
+#landing {
+    background-color: #008888;
+}
+
+#landing a {
+    display: block;
+    text-decoration: none;
+    padding: 1em;
+    background-color: #004080;
+    color: #80FFFF;
+    font-weight: bold;
+    border: 1px solid black;
+    border-radius: 1em;
+    width: fit-content;
+    margin: 0em auto;
+    margin-top: 1em;
+}
+#landing a:hover {
+    background-color: #3080C0;
+}
+
+@media screen and (max-width: 975px) {
+    h1, nav .nav-toggle {
+        font-size: 5vw;
+    }
+    main > section {
+        font-size: 1.65vw;
+    }
+}
+@media screen and (max-width: 700px) {
+    main {
+        padding: 0;
+    }
+    main > section {
+        font-size: 4.5vw;
+        max-width: 100%;
+        padding: 1.5rem 0.5em;
+    }
+    .header {
+        display: block;
+    }
+
+    .header > * {
+        display: block;
+    }
+
+    .header header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-left: 0;
+        padding-right: 0;
+        box-sizing: content-box;
+    }
+
+    .header nav .nav-toggle {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+        padding-bottom: 1.25rem;
+    }
+
+    .header nav .nav-toggle::after {
+        width: 1em;
+    }
+
+    nav #nav-toggle:checked~ul {
+        width: 100%;
+    }
+    nav #nav-toggle:checked~ul li {
+        border-left-width: 0;
+    }
+    nav #nav-toggle:checked~ul li:last-of-type {
+        border-bottom-left-radius: 0;
+    }
 }

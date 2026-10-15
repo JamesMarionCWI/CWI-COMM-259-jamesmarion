@@ -7,19 +7,35 @@
     <title>Programming Fan Site - About James Marion</title>
 
     <link rel="stylesheet" href="style.css">
+    <style>
+        img {
+            max-width: 100%;
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <h1>About<br />James Marion</h1>
-    </header>
-    <nav>
-        <a href="index.html"><div>Home</div></a>
-        <a href="https://www.w3schools.com/" target="_blank"><div>W3Schools</div></a>
-        <a href="about.html"><div>About</div></a>
-    </nav>
+    <div class="header">
+        <header>
+            <h1>Programming For Asks</h1>
+        </header>
+        <nav>
+            <input type="checkbox" name="nav-toggle" id="nav-toggle" aria-hidden="true" />
+            <label for="nav-toggle" class="nav-toggle" aria-hidden="true"></label>
+            <ul>
+                <li><a href="index.html"><div>Home</div></a></li>
+                <li><a href="foundational.html"><div>The Foundations</div></a></li>
+                <li><a href="practical.html"><div>In Practice</div></a></li>
+                <li><a href="bigpicture.html"><div>The Big Picture</div></a></li>
+                <li><a href="about.html"><div>About Me</div></a></li>
+            </ul>
+        </nav>
+    </div>
     <main>
-        <p>I have been a hobbyist software developer for over 15 years. The majority of my work professionally has involved scripting and making simple programs that have made all of my coworkers' lives 10x easier. Now, I am a college student taking various courses on the subject to round out anything I may have missed during my self studies.</p>
-        <img src="https://placecats.com/neo/450/450" alt="Just a cute cat pic because this is the Internet" />
+        <section id="landing">
+            <h2>About Me</h2>
+            <p>I have been a hobbyist software developer for over 15 years. The majority of my work professionally has involved scripting and making simple programs that have made all of my coworkers' lives 10x easier. Now, I am a college student taking various courses on the subject to round out anything I may have missed during my self studies.</p>
+            <img src="https://placecats.com/neo/450/450" alt="Just a cute cat pic because this is the Internet" />
+        </section>
     </main>
     <footer>
         <p>&copy;2026 - James Marion</p>
