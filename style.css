@@ -1,3 +1,8 @@
+/* Keyboard accessibility controls */
+:focus-visible {
+    outline: 5px solid white;
+}
+
 /* Set the font and ensure defaults */
 body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -100,8 +105,10 @@ nav ul {
 }
 
 /* Hides the checkbox so that the hamburger label is the only way to toggle it */
+/* Also ensures that keyboard-accessibility is still possible */
 nav #nav-toggle {
-    display: none;
+    opacity: 0;
+    position: absolute;
 }
 
 /* Styles the hamburger label with enough clickable space for mobile devices too */
@@ -111,6 +118,10 @@ nav .nav-toggle {
     padding-right: 2.25rem;
     color: black;
     background-color: #80FFFF;
+}
+/* Keyboard control accessibility indicator */
+nav #nav-toggle:focus-visible ~ .nav-toggle::after {
+    outline: 5px solid red;
 }
 nav .nav-toggle::after {
     content: "\2630"; /* hamburger symbol */
@@ -145,6 +156,15 @@ nav #nav-toggle:checked~ul li {
     border-left-width: 2px;
     border-top: 0;
     background-color: #808080;
+}
+/* Keyboard controls accessibility indicator */
+nav #nav-toggle:checked~ul li a:focus-visible div {
+    outline: 5px solid white;
+    position: relative;
+    z-index: 999;
+}
+nav #nav-toggle:checked~ul li:last-of-type a:focus-visible div {
+    border-bottom-left-radius: 1rem;
 }
 nav #nav-toggle:checked~ul li:hover > a div {
     /* 50% opacity hover */
@@ -201,7 +221,7 @@ h2 {
 }
 
 #landing {
-    background-color: #008888;
+    background-color: #008080;
 }
 
 #landing a {
