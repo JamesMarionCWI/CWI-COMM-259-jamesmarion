@@ -11,6 +11,21 @@
         #coreidea {
             background-color: #008040;
         }
+        #coreidea > div > img:first-of-type {
+            float: left;
+            width: 9vw;
+        }
+        #coreidea > div > img:last-of-type {
+            float: right;
+            width: 18vw;
+        }
+        #coreidea > div > img {
+            display: block;
+            max-width: 100%;
+            height: auto;
+            margin: 1em;
+            margin-top: 0;
+        }
         #lessons {
             background-color: #004080;
         }
@@ -68,10 +83,53 @@
             margin-top: 2em;
         }
 
-        @media screen and (max-width: 975px) {
-
+        @media screen and (max-width: 3000px) {
+            #coreidea > div > img:first-of-type {
+                width: 15vw;
+            }
+            #coreidea > div > img:last-of-type {
+                width: 22vw;
+            }
         }
+
+        @media screen and (max-width: 2000px) {
+            #coreidea > div > img:first-of-type {
+                width: 20vw;
+            }
+            #coreidea > div > img:last-of-type {
+                width: 35vw;
+            }
+        }
+
+        @media screen and (max-width: 1500px) {
+            #coreidea > div > img:first-of-type {
+                width: 18em;
+            }
+            #coreidea > div > img:last-of-type {
+                width: 32em;
+            }
+        }
+
+        @media screen and (max-width: 1250px) {
+            #coreidea > div > img:first-of-type {
+                width: 10em;
+            }
+            #coreidea > div > img:last-of-type {
+                width: 25em;
+            }
+        }
+
         @media screen and (max-width: 700px) {
+            #coreidea > div > img:first-of-type {
+                width: 100%;
+            }
+            #coreidea > div > img:last-of-type {
+                width: 100%;
+            }
+            #coreidea > div > img {
+                margin: 0;
+                margin-bottom: 1em;
+            }
             #lessons h2 {
                 margin-bottom: 0;
             }
@@ -120,12 +178,23 @@
     <main>
         <section id="landing">
             <h2>Programming For Asks</h2>
+            <p style="font-size: 0.9em;">Disclaimer: This website is a student website for a web design class. Expect many unfinished pages.</p>
             <p>Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.</p>
             <a href="foundational.html">Start Learning Today</a>
         </section>
         <section id="coreidea">
             <h2>The Core Idea</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.</p>
+            <div>
+                <img src="ProcessingPipeline.png" alt="Keep it simple - process inputs into outputs" />
+                <img src="ProcessingExample.png" alt="Cleaning up poorly managed data is only one program away" />
+                <p>Programming doesn't have to start with building a massive application. Often times, there are many annoying tasks that can keep coming up in someone's daily workflow. These tasks can produce the kinds of problems that can become small programming projects. Here, we call these small problems "Asks". By doing a small few hours of programming work, we can save someone many more dozens of hours of repetitive labor over the course of many weeks.</p>
+                <p>Think about the specifics of these annoying tasks. Maybe someone needs to find a particular error buried in thousands of lines of log files. Perhaps a spreadsheet contains more information than anyone can reasonably analyze by hand, but they're still crunching away at it anyway. Or maybe a repetitive task is eating up time that could be spent on something more important. Each of these situations presents an opportunity to use programming to make a difficult task easier.</p>
+                <p>The first step isn't necessarily to start writing code. It's to understand what someone actually needs. What problem are they trying to solve? What information do they already have? What should the result look like? Answering these questions helps turn a vague request into something more concrete. Once the problem is understood, it becomes easier to identify the smaller steps that will lead toward a solution, and whether that solution even needs programming in the first place.</p>
+                <p>Those smaller steps are where programming fundamentals come into play. A program receives information, makes decisions, performs operations, and produces a result. By gathering the required information beforehand, you make it a lot easier on yourself to determine whether or not to even go through with making the program in the first place. Different problems require different approaches, but many of the same underlying ideas apply.</p>
+                <p>Programming For Asks is built around this practical way of thinking. Additionally, we are beginner-oriented. Rather than beginning with the expectation that you already know how to build complete applications, it focuses on the fundamentals behind solving problems with code. The examples and concepts presented here are intended to be approachable for people who are new to programming, regardless of which programming language they eventually choose to learn.</p>
+                <p>As you become more comfortable with the basics, you'll begin to recognize the same ideas in increasingly complex projects. The techniques used to process a small collection of records can help you understand how a larger application handles information. The process of breaking a request into steps can help you reason about a website, a database tool, an automation script, or even a game. The scale may change, but the underlying problem-solving skills remain useful.</p>
+                <p>You don't have to know where programming will take you before you begin. Start with us today and learn how to break down a problem, work through its individual parts, and turn those pieces into a useful result. One small solution can lead to another, and those experiences can gradually open the door to bigger ideas and more ambitious projects intentionally built - one small step at a time.</p>
+            </div>
         </section>
         <section id="lessons">
             <h2>Lessons</h2>
