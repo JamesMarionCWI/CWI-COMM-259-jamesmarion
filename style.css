@@ -20,6 +20,7 @@ body {
     margin: 0;
     /* Push the bottom of the page slightly farther away to allow scrolling down beyond the bottom of the page a little */
     margin-bottom: 2.5rem;
+    background-color: #80FFFF;
 }
 
 /* Standardize some settings across browsers in case some have weird defaults */
@@ -243,7 +244,7 @@ h2 {
     color: #80FFFF;
     font-weight: bold;
     border: 1px solid black;
-    border-radius: 1em;
+    border-radius: 1rem;
     width: fit-content;
     margin: 0em auto;
     margin-top: 1em;

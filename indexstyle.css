@@ -1,0 +1,155 @@
+#coreidea {
+    background-color: #008040;
+}
+.coreidea-image:first-of-type {
+    float: left;
+}
+.coreidea-image:first-of-type > img {
+    width: 9vw;
+}
+.coreidea-image:not(:first-of-type) {
+    float: right;
+}
+.coreidea-image:not(:first-of-type) > img {
+    width: 18vw;
+}
+.coreidea-image > img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 1em;
+    margin-top: 0;
+}
+#lessons {
+    background-color: #004080;
+}
+
+#lessons .cards {
+    display: flex;
+    justify-content: center;
+}
+
+/* Ensure each card has a standardized sizing and style */
+#lessons .card {
+    padding: 1em;
+    padding-top: 1rem;
+    margin: 0.5em;
+    margin-bottom: 2em;
+    width: 15em;
+    height: 100%;
+    border-radius: 1rem;
+    border: 1px solid black;
+    color: #000000;
+}
+
+#lessons .card:hover {
+    border: 1px solid white;
+}
+
+#lessons .card .card-tag {
+    text-align: right;
+    font-size: 0.75em;
+    margin: 0;
+}
+#lessons .card .card-tag{
+    color: #404040;
+}
+
+#lessons .card p, #lessons .card h3 {
+    margin: 0;
+    text-indent: 0;
+}
+#lessons .card h3 {
+    margin-bottom: 1rem;
+}
+#lessons .card.foundational {
+    order: 0;
+    background-color: #80FFFF;
+}
+#lessons .card.practical {
+    order: -1;
+    background-color: #FF80FF;
+    margin-top: 2em;
+}
+#lessons .card.bigpicture {
+    order: 1;
+    background-color: #00FF80;
+    margin-top: 2em;
+}
+
+@media screen and (max-width: 3000px) {
+    .coreidea-image:first-of-type > img {
+        width: 15vw;
+    }
+    .coreidea-image:not(:first-of-type) > img {
+        width: 22vw;
+    }
+}
+
+@media screen and (max-width: 2000px) {
+    .coreidea-image:first-of-type > img {
+        width: 20vw;
+    }
+    .coreidea-image:not(:first-of-type) > img {
+        width: 35vw;
+    }
+}
+
+@media screen and (max-width: 1500px) {
+    .coreidea-image:first-of-type > img {
+        width: 18em;
+    }
+    .coreidea-image:not(:first-of-type) > img {
+        width: 32em;
+    }
+}
+
+@media screen and (max-width: 1250px) {
+    .coreidea-image:first-of-type > img {
+        width: 10em;
+    }
+    .coreidea-image:not(:first-of-type) > img {
+        width: 25em;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .coreidea-image:first-of-type > img {
+        width: 100%;
+    }
+    .coreidea-image:not(:first-of-type) > img {
+        width: 100%;
+    }
+    .coreidea-image > img {
+        margin: 0;
+        margin-bottom: 1em;
+    }
+    .coreidea-image {
+        width: 100%;
+    }
+    #lessons h2 {
+        margin-bottom: 0;
+    }
+    #lessons .cards {
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+    #lessons .card {
+        margin: 0.5em 0;
+    }
+    #lessons .card:last-of-type {
+        margin-bottom: 0;
+    }
+    #lessons .card.foundational {
+        order: -1;
+    }
+    #lessons .card.practical {
+        order: 0;
+        margin-top: 0;
+    }
+    #lessons .card.bigpicture {
+        order: 1;
+        margin-top: 0;
+    }
+}
