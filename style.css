@@ -20,7 +20,7 @@ body {
     margin: 0;
     /* Push the bottom of the page slightly farther away to allow scrolling down beyond the bottom of the page a little */
     margin-bottom: 2.5rem;
-    background-color: #80FFFF;
+    background-color: #FFFFFF;
 }
 
 /* Standardize some settings across browsers in case some have weird defaults */
@@ -98,6 +98,7 @@ footer {
     line-height: 1;
     width: 100%;
     border-bottom: 2px solid black;
+    background-color: #80FFFF;
 }
 
 .header > * {
